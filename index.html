@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Quer casar comigo?</title>
+    <!-- Adicione a folha de estilos do Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+      /* Define a classe para o botão Não */
+      .botao-nao {
+        position: absolute; /* Define a posição do botão como absoluta */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container text-center pt-5">
+      <h1 class="display-2">Quer casar comigo?</h1>
+      <div class="pt-3">
+        <!-- Adicione os botões usando a classe "btn" do Bootstrap -->
+        <a class="btn btn-danger btn-lg" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">Não</a>
+        <span class="pr-2"></span>
+        <a class="btn btn-primary btn-lg botao-nao" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKXAS-kCNTnCNkiVPwn4uC9-JZIzDtAWLBlsvoYYWVBSmOc2u-graiMM2T2eU_tQUrKis&usqp=CAU" onmouseover="moverBotao()">Sim</a>
+    </div>
+    </div>
+    
+    <!-- Adicione os scripts do Bootstrap e do JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      // Define a função para mover o botão Não aleatoriamente na tela
+      function moverBotao() {
+        // Define as dimensões da janela
+        var alturaJanela = $(window).height() - 100;
+        var larguraJanela = $(window).width() - 100;
+        // Define a posição aleatória do botão
+        var topo = Math.floor(Math.random() * alturaJanela);
+        var esquerda = Math.floor(Math.random() * larguraJanela);
+        // Aplica a posição ao botão
+        $(".botao-nao").css({"top": topo, "left": esquerda});
+      }
+    </script>
+  </body>
+</html>
